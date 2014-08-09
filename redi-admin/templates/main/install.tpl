@@ -8,7 +8,7 @@
           <p>Pleae remove the install.php from the redi-admin folder once completed - as any user that fills this form in will be set with admin rights</p>
       </div>
       <div class="modal-body">
-          <form class="form col-md-12 center-block">
+          <form method="post" class="form col-md-12 center-block">
             <div class="form-group">
               <input type="text" name="username" class="form-control input-lg" placeholder="Admin Username">
             </div>
