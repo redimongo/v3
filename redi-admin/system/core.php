@@ -48,6 +48,7 @@ class syscore {
 		$collection = static::db()->members;
 		$collection->insert(array(
 			"signuptime"=>new MongoDate(),
+			"username"=>$data['username'],
 			"password"=>$password,
 			"salt"=>new MongoId($new_salt['_id']),
 			"type"=>$type,
