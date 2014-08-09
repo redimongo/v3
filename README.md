@@ -15,6 +15,8 @@ v3 will is all newly coded and as you will be able to see is coded from scratch 
 This script uses Opensource software
 ==
 With many thanks from
+
 Bootstrap - Twitter
+
 Limonade - https://github.com/savonet/liquidsoap
 
