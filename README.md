@@ -22,9 +22,13 @@ Bootstrap - Twitter
 
 Limonade - https://github.com/savonet/liquidsoap
 
+MongoDB - http://www.mongodb.org
+
+jQuery - http://jquery.org
+
 
 ==
-Feedback and 3rd party development welcomed
+Feedback and 3rd party
 ==
 My goal for this is to be the wordpress of MongoDB - this will allow users the options of installing plugins, templates etc. I welcome and would love any help that anyone wants to provie.
 
