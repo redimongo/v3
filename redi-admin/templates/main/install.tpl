@@ -10,11 +10,21 @@
       <div class="modal-body">
           <form class="form col-md-12 center-block">
             <div class="form-group">
-              <input type="text" class="form-control input-lg" placeholder="Admin Username">
+              <input type="text" name="username" class="form-control input-lg" placeholder="Admin Username">
             </div>
             <div class="form-group">
-              <input type="password" class="form-control input-lg" placeholder="Admin Password">
+              <input type="password" name="password" class="form-control input-lg" placeholder="Admin Password">
             </div>
+            <div class="form-group">
+              <input type="text" name="firstname" class="form-control input-lg" placeholder="First Name">
+            </div>
+            <div class="form-group">
+              <input type="text" name="lastname" class="form-control input-lg" placeholder="Last Name">
+            </div>
+            <div class="form-group">
+              <input type="email" name="email" class="form-control input-lg" placeholder="email@emailaddress.com">
+            </div>
+            
             <div class="form-group">
               <button class="btn btn-success btn-lg btn-block">Run Install</button>
              
