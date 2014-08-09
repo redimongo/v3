@@ -33,9 +33,10 @@ class syscore {
 				}
 			}
 		}
-		//print siteName;	
+		
+		//print siteName;
+		
 	}
-	
 	
 	public function createuser($type){
 	
@@ -66,6 +67,51 @@ class syscore {
 		$c = substr(str_shuffle(str_repeat("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ@!#$%^&*()_+=-", 20)), 0, 20);
 		return $b.rand(1781,187156715671567156715761576157614652456246).$a.substr(md5(microtime()),rand(0,26),40).$c;
 	}
+	
+	
+	
+	function loginproccess(){
+		$collection = static::db()->members;	
+		$user = $collection->findOne(array("username"=>$_POST['username']));	
+		$collection = static::db()->salts;
+		$salt = $collection->findOne(array("_id"=>new MongoId($user['salt'])));
+		$password =  hash('sha512', $salt['salt'].$_POST['password'].$salt['salt'], FALSE);
+		
+		if($user['password'] == $password){
+			$collection = static::db()->members;	
+			$cursor = $collection->find(array("_id"=>new MongoId($user['_id'])),
+			array("_id","profile.picture","mydetails.name.first","mydetails.name.last"));
+			if ($cursor->count() == 1)
+			{
+    			$test = array();
+				// iterate through the results
+				while( $cursor->hasNext() ) {	
+					$test[] = ($cursor->getNext());
+				}
+			}
+			//Print Results	
+			foreach($test as $d) {
+    			$_SESSION["user"] = rand(178116717717,187156715671567156715761576157614652456246);
+			}
+				$_SESSION["user_information"] = $test;
+		 	header("Location: #");
+		}
+		else
+		{
+			header("Location: #?error=wrongpassword");
+		}
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	
 	public function fetchmenuitem($task){
