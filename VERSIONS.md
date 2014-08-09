@@ -15,6 +15,7 @@ To Come in this version
 * User profile section
 * Ban IP address
 * Set Member Levels
+* Choose TinyMCE or another wysiwyg editor
 
 v3.1.0
 ==
