@@ -6,7 +6,7 @@
           <h1 class="text-center"><img src="templates/main/images/logo.png" height="80" alt="RediMongo"></h1>
       </div>
       <div class="modal-body">
-          <form class="form col-md-12 center-block">
+          <form action="login" method="post" class="form col-md-12 center-block">
             <div class="form-group">
               <input type="text" name="username" class="form-control input-lg" placeholder="Username">
             </div>

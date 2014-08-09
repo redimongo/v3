@@ -94,11 +94,11 @@ class syscore {
     			$_SESSION["user"] = rand(178116717717,187156715671567156715761576157614652456246);
 			}
 				$_SESSION["user_information"] = $test;
-		 	header("Location: #");
+		 	header("Location: index.php");
 		}
 		else
 		{
-			header("Location: #?error=wrongpassword");
+			header("Location: index.php?error=wrongpassword");
 		}
 		
 	}
@@ -116,12 +116,24 @@ class syscore {
 	
 	public function fetchmenuitem($task){
 		include("templates/main/header.tpl");
-		//$collection = static::db()->menu;
-		//$task = $collection->findOne(array("name"=>$task));
-		//self::page_or_blog();
+		
 		if(empty($_SESSION['user'])){
 			include("templates/main/login.tpl");
 		}
+		else
+		{
+			switch ($task) {
+				case 'create':
+					
+				break;
+				
+				default:
+					
+				break;
+			}
+		}
+		
+		
 		include("templates/main/footer.tpl");
 	}
 	

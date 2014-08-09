@@ -38,24 +38,21 @@
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
-                    <li class="active"><a href="#">Main</a></li>
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="/menu">Site Menu</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Pages<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">Create Page</a></li>
-                                <li><a href="#">Manage Page</a></li>
+                                <li><a href="/create?t=pages">Create Page</a></li>
+                                <li><a href="/manage?t=pages">Manage Page</a></li>
                             </ul>
                     </li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Posts<span class="caret"></span></a>
                             <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">New Post</a></li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Posts</a> <ul class="dropdown-menu" role="menu">
-                                <li><a href="#">New Post</a></li>
-                                <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">Posts</a></li>
-                                <li><a href="#">Categories</a></li>
-                            </ul></li>
-                                <li><a href="#">Categories</a></li>
+                                <li><a href="/create?t=posts">New Post</a></li>
+                                <li><a href="/manage?t=posts">Manage Posts</a></li>
+                                <li><a href="/categories">Categories</a></li>
                             </ul>
                     </li>
                     <li class="dropdown">
