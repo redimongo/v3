@@ -8,9 +8,9 @@ class syscore {
 	public static function db() 
 	{
    	 if (!static::$_db) {
-        static::$_db = new Mongo("mongodb://".SITEDBUSERNAME.":".SITEDBPASS."@".SITEDBURL.":".SITEDBPORT, array(/*"persist" => "x", */"db"=>SITEDB));
+        static::$_db = new MongoClient("mongodb://".SITEDBUSERNAME.":".SITEDBPASS."@".SITEDBURL.":27017/".SITEDB);
    	 }
-	 $siteDB = SITEDB;
+	  $siteDB = SITEDB;
    	 return static::$_db->$siteDB;
 	}
 	

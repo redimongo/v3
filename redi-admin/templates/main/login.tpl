@@ -8,10 +8,10 @@
       <div class="modal-body">
           <form action="login" method="post" class="form col-md-12 center-block">
             <div class="form-group">
-              <input type="text" name="username" class="form-control input-lg" placeholder="Username">
+              <input type="text" name="username" class="form-control input-lg login" placeholder="Username">
             </div>
             <div class="form-group">
-              <input type="password" name="password" class="form-control input-lg" placeholder="Password">
+              <input type="password" name="password" class="form-control input-lg login" placeholder="Password">
             </div>
             <div class="form-group">
               <button class="btn btn-success btn-lg btn-block">Sign In</button>

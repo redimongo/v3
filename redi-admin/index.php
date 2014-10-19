@@ -9,10 +9,20 @@ $redi = new syscore();
 $redi->settings();
 
 if(file_exists("install.php")){
-	require_once("install.php"); die();
+	require_once("install.php");
+	if($_POST)
+	{
+		$install = new install();
+		$install->createCollection();
+		$redi->createuser("superadmin");
+	}
+	die();
 }
 
-dispatch_get("/*", array($redi, 'fetchmenuitem'));
+dispatch_get("/**", array($redi, 'fetchmenuitem'));
+dispatch_post("/login", array($redi, 'loginproccess'));
+dispatch_post("/**", array($redi, 'fetchmenuitem'));
+
 
 run();
 ?>
